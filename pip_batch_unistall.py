@@ -47,6 +47,7 @@ class Testcase1(unittest.TestCase):
                 print(i)
         
         print('beginging uninstalling..')
+
         # begin uninstalling of venv packages
         for i in self.packages:
             print('\n\ncurrent Package under work: {}'.format(i))
