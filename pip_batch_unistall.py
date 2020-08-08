@@ -65,7 +65,7 @@ class Testcase1(unittest.TestCase):
         
         # at the end, open log file
         print('NOTE : see detailed log in "log_pip_batch_uninstall.txt" file..')
-        open('log_pip_batch_uninstall')
+        open('log_pip_batch_uninstall.txt')
         
         def tearDown(self):
             logging.info('requirements file still has old packages, modify it for updated packages and install from it')
