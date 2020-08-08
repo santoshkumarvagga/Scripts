@@ -1,7 +1,7 @@
 '''This script will detect all(except default ones) packages installed in a virtual environment(virtualenv) 
 and uninstalls them at once, in windows.
 
-pre-requisites:
+* pre-requisites:
 
 1) keep requirements.txt(can be empty) and in same folder as of code.
 2) virtual enviroment should be created using virtualenv package, from within the directory where code.py resides.
