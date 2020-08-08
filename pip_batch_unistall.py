@@ -15,6 +15,9 @@ import unittest
 
 logging.basicConfig(filename='log_pip_batch_uninstall.txt',format='%(asctime)s : %(filename)s : %(funcName)s : %(levelname)s :  %(lineno)d - %(message)s', level = logging.DEBUG)
 
+# opening log file for fresh update
+logfile = open('log_pip_batch_uninstall.txt','w')
+
 class Testcase1(unittest.TestCase):
 
     def setUp(self):
@@ -63,11 +66,14 @@ class Testcase1(unittest.TestCase):
         # finally, close the requirements.txt file
         self.inputfile.close()
         
-        # at the end, open log file
-        print('NOTE : see detailed log in "log_pip_batch_uninstall.txt" file..')
-        open('log_pip_batch_uninstall.txt')
+        # at the end, display log file
+        print('\n\nNOTE : see detailed log in "log_pip_batch_uninstall.txt" file..\n\n')
         
         def tearDown(self):
             logging.info('requirements file still has old packages, modify it for updated packages and install from it')
 
+
 unittest.main()
+
+# closing log file
+logfile.close()
