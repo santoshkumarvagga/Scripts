@@ -16,8 +16,12 @@ import unittest
 logging.basicConfig(filename='log_pip_batch_uninstall.txt',format='%(asctime)s : %(filename)s : %(funcName)s : %(levelname)s :  %(lineno)d - %(message)s', level = logging.DEBUG)
 
 class Testcase1(unittest.TestCase):
+
+    def setUp(self):
+        logging.info('Script assumes pre-requisites are taken care..!!')
+        
     def test_mycase(self):
-        print('Testcase-1 started..!!')
+        logging.debug('Testcase-1 started..!!')
         
         # take venv name
         venv_name = input('Enter name of venv\n')
@@ -35,7 +39,7 @@ class Testcase1(unittest.TestCase):
         os.chdir(my_dir)
 
         # prepare requirements.txt file
-        print('checking requirements file..')
+        logging.debug('checking requirements file..')
         os.system('pip freeze > requirements.txt')
 
         # begin uninstalling
@@ -44,18 +48,26 @@ class Testcase1(unittest.TestCase):
         # view currently installed packages
         self.packages = self.inputfile.readlines()
         for i in self.packages:
-                print(i)
+                logging.debug(i)
         
-        print('beginging uninstalling..')
+        logging.debug('beginging uninstalling..')
 
         # begin uninstalling of venv packages
         for i in self.packages:
-            print('\n\ncurrent Package under work: {}'.format(i))
+            logging.debug('\n\ncurrent Package under work: {}'.format(i))
             try:
                 os.system('pip uninstall -y {}'.format(i))
             except Exception as e:
                 logging.error('unexpected exception occured: {}'.format(e))
 
+        # finally, close the requirements.txt file
         self.inputfile.close()
+        
+        # at the end, open log file
+        print('NOTE : see detailed log in "log_pip_batch_uninstall.txt" file..')
+        open('log_pip_batch_uninstall')
+        
+        def tearDown(self):
+            logging.info('requirements file still has old packages, modify it for updated packages and install from it')
 
 unittest.main()
