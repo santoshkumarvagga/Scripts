@@ -1,3 +1,4 @@
+#/usr/bin/python3
 '''This Script helps to retrive the module name, class name and function name'''
 
 import re
