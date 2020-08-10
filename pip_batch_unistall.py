@@ -6,7 +6,7 @@ and uninstalls them at once, in windows.
 1) keep requirements.txt(can be empty) and in same folder as of code.
 2) virtual enviroment should be created using virtualenv package, from within the directory where code.py resides.
 
-NOTE: a handy log file 'log_pip_batch_uninstall' will be generated in same folder for debug purposes '''
+NOTE: a handy log file 'log_pip_batch_uninstall' will be generated in same folder for debug purposes.. '''
 
 
 import os
