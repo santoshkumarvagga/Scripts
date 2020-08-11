@@ -1,4 +1,2 @@
-2020-08-08 17:12:12,809 : pip_batch_unistall.py : setUp : INFO :  24 - Script assumes pre-requisites are taken care..!!
-2020-08-08 17:12:12,810 : pip_batch_unistall.py : test_mycase : DEBUG :  27 - Testcase-1 started..!!
-2020-08-08 17:12:17,022 : pip_batch_unistall.py : test_mycase : DEBUG :  45 - checking requirements file..
-2020-08-08 17:12:17,965 : pip_batch_unistall.py : test_mycase : DEBUG :  56 - beginging uninstalling..
+2020-08-11 10:54:29,841 : pip_batch_unistall.py : setUp : INFO :  24 - Script assumes pre-requisites are taken care..!!
+2020-08-11 10:54:29,841 : pip_batch_unistall.py : test_mycase : DEBUG :  27 - Testcase-1 started..!!
